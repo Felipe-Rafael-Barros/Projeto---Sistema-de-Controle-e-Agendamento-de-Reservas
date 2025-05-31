@@ -1,0 +1,14 @@
+C:\Users\Computador 2\OneDrive\Área de Trabalho\Projeto para Linkedin\Projeto - Sistema de Controle e Agendamento de Reservas\SistemaDeReservas\bin\Debug\net9.0\SistemaDeReservas.exe
+C:\Users\Computador 2\OneDrive\Área de Trabalho\Projeto para Linkedin\Projeto - Sistema de Controle e Agendamento de Reservas\SistemaDeReservas\bin\Debug\net9.0\SistemaDeReservas.deps.json
+C:\Users\Computador 2\OneDrive\Área de Trabalho\Projeto para Linkedin\Projeto - Sistema de Controle e Agendamento de Reservas\SistemaDeReservas\bin\Debug\net9.0\SistemaDeReservas.runtimeconfig.json
+C:\Users\Computador 2\OneDrive\Área de Trabalho\Projeto para Linkedin\Projeto - Sistema de Controle e Agendamento de Reservas\SistemaDeReservas\bin\Debug\net9.0\SistemaDeReservas.dll
+C:\Users\Computador 2\OneDrive\Área de Trabalho\Projeto para Linkedin\Projeto - Sistema de Controle e Agendamento de Reservas\SistemaDeReservas\bin\Debug\net9.0\SistemaDeReservas.pdb
+C:\Users\Computador 2\OneDrive\Área de Trabalho\Projeto para Linkedin\Projeto - Sistema de Controle e Agendamento de Reservas\SistemaDeReservas\obj\Debug\net9.0\SistemaDeReservas.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Computador 2\OneDrive\Área de Trabalho\Projeto para Linkedin\Projeto - Sistema de Controle e Agendamento de Reservas\SistemaDeReservas\obj\Debug\net9.0\SistemaDeReservas.AssemblyInfoInputs.cache
+C:\Users\Computador 2\OneDrive\Área de Trabalho\Projeto para Linkedin\Projeto - Sistema de Controle e Agendamento de Reservas\SistemaDeReservas\obj\Debug\net9.0\SistemaDeReservas.AssemblyInfo.cs
+C:\Users\Computador 2\OneDrive\Área de Trabalho\Projeto para Linkedin\Projeto - Sistema de Controle e Agendamento de Reservas\SistemaDeReservas\obj\Debug\net9.0\SistemaDeReservas.csproj.CoreCompileInputs.cache
+C:\Users\Computador 2\OneDrive\Área de Trabalho\Projeto para Linkedin\Projeto - Sistema de Controle e Agendamento de Reservas\SistemaDeReservas\obj\Debug\net9.0\SistemaDeReservas.dll
+C:\Users\Computador 2\OneDrive\Área de Trabalho\Projeto para Linkedin\Projeto - Sistema de Controle e Agendamento de Reservas\SistemaDeReservas\obj\Debug\net9.0\refint\SistemaDeReservas.dll
+C:\Users\Computador 2\OneDrive\Área de Trabalho\Projeto para Linkedin\Projeto - Sistema de Controle e Agendamento de Reservas\SistemaDeReservas\obj\Debug\net9.0\SistemaDeReservas.pdb
+C:\Users\Computador 2\OneDrive\Área de Trabalho\Projeto para Linkedin\Projeto - Sistema de Controle e Agendamento de Reservas\SistemaDeReservas\obj\Debug\net9.0\SistemaDeReservas.genruntimeconfig.cache
+C:\Users\Computador 2\OneDrive\Área de Trabalho\Projeto para Linkedin\Projeto - Sistema de Controle e Agendamento de Reservas\SistemaDeReservas\obj\Debug\net9.0\ref\SistemaDeReservas.dll
