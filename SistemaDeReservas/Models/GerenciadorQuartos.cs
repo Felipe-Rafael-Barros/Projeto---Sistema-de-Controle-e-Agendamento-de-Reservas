@@ -6,12 +6,13 @@ using System.Text;
 
 namespace SistemaDeReservas.Models
 {
-    public class GerenciadoQuartos
+    public class GerenciadorQuartos
     {
         private readonly List<Quarto> _quartos;
 
-        public GerenciadoQuartos()
+        public GerenciadorQuartos()
         {
+            // Aqui o sistema inicia com um número de quartos X, mas n pode adicionar ainda durante a execução do codigo(Adicionar a funcionalidade)
             _quartos = new List<Quarto>
             {
                 new Quarto(100, "luxo 1", 500, true),
@@ -24,10 +25,10 @@ namespace SistemaDeReservas.Models
                 new Quarto(202, "medio 3", 250, true),
                 new Quarto(203, "medio 4", 250, true),
 
-                new Quarto(300, "basico 1", 100, true),
-                new Quarto(301, "basico 2", 100, true),
-                new Quarto(302, "basico 3", 100, true),
-                new Quarto(303, "basico 4", 100, true),
+                new Quarto(300, "básico 1", 100, true),
+                new Quarto(301, "básico 2", 100, true),
+                new Quarto(302, "básico 3", 100, true),
+                new Quarto(303, "básico 4", 100, true),
             };
         }
 
@@ -51,6 +52,49 @@ namespace SistemaDeReservas.Models
 
             tabela.AppendLine("└──────────┴──────────────┴─────────────┴────────────┘");
             return tabela.ToString();
+        }
+
+        public int AlterarDisponibilidade()
+        {
+            int numero = 0;
+            bool QuartoEncontrado = false;
+            while (!QuartoEncontrado)
+            {
+                Console.WriteLine("Por favor, selecione o nº do quarto desejado:");
+                numero = int.Parse(Console.ReadLine());
+                for (int i = 0; i < _quartos.Count; i++)
+                {
+                    if (_quartos[i].Numero == numero)
+                    {
+                        _quartos[i].Disponivel = !_quartos[i].Disponivel;
+                        QuartoEncontrado = true;
+                        Console.WriteLine("O quarto " + _quartos[i].Numero + " Agora está marcado como ocupado com sucesso. ");
+
+
+                    }
+                }
+                if (QuartoEncontrado == false)
+                {
+                    Console.WriteLine("Quarto não encontrado, por favor tente outro dentre os listados anteriormente.");
+                }
+                
+
+            }
+            return numero;
+        }
+
+        public int DiariaDoQuarto(int NumeroQuarto)
+        {
+            int PrecoDiaria = 0;
+            for (int i = 0; i < _quartos.Count; i++)
+            {
+                if (_quartos[i].Numero == NumeroQuarto)
+                {
+                    PrecoDiaria = _quartos[i].PrecoDiaria;
+                }
+
+            }
+            return PrecoDiaria;
         }
     }
 }

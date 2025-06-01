@@ -12,3 +12,4 @@ C:\Users\Computador 2\OneDrive\Área de Trabalho\Projeto para Linkedin\Projeto -
 C:\Users\Computador 2\OneDrive\Área de Trabalho\Projeto para Linkedin\Projeto - Sistema de Controle e Agendamento de Reservas\SistemaDeReservas\obj\Debug\net9.0\SistemaDeReservas.pdb
 C:\Users\Computador 2\OneDrive\Área de Trabalho\Projeto para Linkedin\Projeto - Sistema de Controle e Agendamento de Reservas\SistemaDeReservas\obj\Debug\net9.0\SistemaDeReservas.genruntimeconfig.cache
 C:\Users\Computador 2\OneDrive\Área de Trabalho\Projeto para Linkedin\Projeto - Sistema de Controle e Agendamento de Reservas\SistemaDeReservas\obj\Debug\net9.0\ref\SistemaDeReservas.dll
+C:\Users\Computador 2\OneDrive\Área de Trabalho\Projeto para Linkedin\Projeto - Sistema de Controle e Agendamento de Reservas\SistemaDeReservas\obj\Debug\net9.0\SistemaDeReservas.sourcelink.json

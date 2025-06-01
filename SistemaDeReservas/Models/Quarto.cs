@@ -7,6 +7,7 @@ namespace SistemaDeReservas.Models
 {
     public class Quarto
     {
+
         public int Numero { get; set; } // Número do quarto
         public String Tipo { get; set; } // Tipo, alto padrão, medio, baixo... exemplo
 
@@ -15,6 +16,7 @@ namespace SistemaDeReservas.Models
         public int PrecoDiaria { get; set; }
 
         public Quarto(int numero, string tipo, int precodiaria, bool disponivel)
+        
         {
             Numero = numero;
             Tipo = tipo;

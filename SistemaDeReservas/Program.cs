@@ -1,7 +1,9 @@
 ﻿using SistemaDeReservas.Models;
 
-
-var service = new GerenciadoQuartos();
+// Cria as instâncias uma vez no início
+var GerenciadorPessoas = new GerenciadorPessoas();
+var GerenciadorQuartos = new GerenciadorQuartos();
+var GerenciadorReservas = new GerenciadorReservas(GerenciadorPessoas, GerenciadorQuartos);
 
 bool SistemaAtivo = true;
 
@@ -18,8 +20,8 @@ while (SistemaAtivo)
 ║   [2] Consultar reservas existentes                                   ║
 ║   [3] Atualizar reserva                                               ║
 ║   [4] Cancelar reserva                                                ║
-║   [5] Verificar Quartos                                               ║
-║   [6] Configurar valores/tarifas                                      ║
+║   [5] Verificar Disponibilidade dos Quartos                           ║
+║   [6] Lista de Hospedes Cadastrado no Sistema                         ║
 ║   [7] Relatórios e estatísticas                                       ║
 ║   [8] Configurações do sistema                                        ║
 ║   [0] Sair                                                            ║
@@ -32,7 +34,7 @@ while (SistemaAtivo)
     switch (Opção)
 {
     case "1":
-        //CadastrarReserva();
+        GerenciadorReservas.CadastrarNovaReserva();
         break;
     case "2":
         //ListarReservas();
@@ -43,13 +45,15 @@ while (SistemaAtivo)
     case "4":
         //CancelarReserva();
         break;
-    case "5":
-        Console.WriteLine(service.ListarQuartosFormatado());
+    case "5": //Lista Quartos cadastrados
+        Console.WriteLine(GerenciadorReservas.ListarQuartos());
         Console.WriteLine("Clique em alguma tecla para voltar ao menu");
         Console.ReadLine();
         break;
     case "6":
-        //ConfigurarValores();
+        Console.WriteLine(GerenciadorReservas.ListarPessoasCadastradas());
+        Console.WriteLine("Clique em alguma tecla para voltar ao menu");
+        Console.ReadLine();
         break;
     case "0":
         SistemaAtivo = false;
