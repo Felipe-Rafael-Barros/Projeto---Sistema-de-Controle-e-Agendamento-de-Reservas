@@ -21,9 +21,7 @@ while (SistemaAtivo)
 ║   [3] Atualizar reserva                                               ║
 ║   [4] Cancelar reserva                                                ║
 ║   [5] Verificar Disponibilidade dos Quartos                           ║
-║   [6] Lista de Hospedes Cadastrado no Sistema                         ║
-║   [7] Relatórios e estatísticas                                       ║
-║   [8] Configurações do sistema                                        ║
+║   [6] Lista de Hospedes Cadastrado no Sistema                         ║                                                                      ║
 ║   [0] Sair                                                            ║
 ║                                                                       ║
 ╚═══════════════════════════════════════════════════════════════════════╝

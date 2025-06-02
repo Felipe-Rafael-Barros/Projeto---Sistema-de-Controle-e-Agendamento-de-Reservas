@@ -4,5 +4,5 @@ Lista De Pontos a Melhorar Ainda No Projeto:
 - Bug Na contagem do Preço
 - Ao tentar cadastrar uma reservar a um lote já cadastrado o sistema soma-se as pessoas no quarto e troca a disponibilidade de ocupado para disponivel
 - Quando Mudar para ocupado, a lista para verificar as disponibilidade dos quartos fica "quebrada" visualmente.
-- Sem Funcionalidade de Atualizar reservar, Cancelar, Relátioris e estatísticas, configuração do sistema
+- Sem Funcionalidade de Atualizar reservar
 

@@ -67,18 +67,18 @@ namespace SistemaDeReservas.Models
                     numero = int.Parse(Console.ReadLine());
                     for (int i = 0; i < _quartos.Count; i++)
                     {
-                        if (_quartos[i].Numero == numero)
+                        if (_quartos[i].Numero == numero && _quartos[i].Disponivel == true)
                         {
                             _quartos[i].Disponivel = !_quartos[i].Disponivel;
                             QuartoEncontrado = true;
-                            Console.WriteLine("O quarto " + _quartos[i].Numero + " Agora está marcado como ocupado com sucesso. ");
+                            Console.WriteLine("O quarto " + _quartos[i].Numero + " está disponível, por favor continue o cadastro abaixo. ");
 
 
                         }
                     }
                     if (QuartoEncontrado == false)
                     {
-                        Console.WriteLine("Quarto não encontrado, por favor tente outro dentre os listados anteriormente.");
+                        Console.WriteLine("Quarto não encontrado ou não está disponível no momento, tente novamente.");
                     }
 
 
