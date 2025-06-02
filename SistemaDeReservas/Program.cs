@@ -37,7 +37,9 @@ while (SistemaAtivo)
         GerenciadorReservas.CadastrarNovaReserva();
         break;
     case "2":
-        //ListarReservas();
+        Console.WriteLine(GerenciadorReservas.ListarReservas());
+        Console.WriteLine("Clique em alguma tecla para voltar ao menu");
+        Console.ReadLine();
         break;
     case "3":
         //AtualizarReserva();

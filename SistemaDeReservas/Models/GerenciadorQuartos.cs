@@ -83,18 +83,20 @@ namespace SistemaDeReservas.Models
             return numero;
         }
 
-        public int DiariaDoQuarto(int NumeroQuarto)
+        public (int,string)  DiariaDoQuarto(int NumeroQuarto)
         {
             int PrecoDiaria = 0;
+            string Tipo = "";
             for (int i = 0; i < _quartos.Count; i++)
             {
                 if (_quartos[i].Numero == NumeroQuarto)
                 {
                     PrecoDiaria = _quartos[i].PrecoDiaria;
+                    Tipo = _quartos[i].Tipo;
                 }
 
             }
-            return PrecoDiaria;
+            return (PrecoDiaria,Tipo);
         }
     }
 }

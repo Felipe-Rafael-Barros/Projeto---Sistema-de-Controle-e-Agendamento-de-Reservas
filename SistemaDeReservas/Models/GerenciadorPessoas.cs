@@ -15,10 +15,11 @@ namespace SistemaDeReservas.Models
             _pessoas = new List<Pessoa> { };
         }
 
-        public void CadastrarPessoa(int NumeroQuarto, DateTime DataCadastro)
+        public String CadastrarPessoa(int NumeroQuarto, DateTime DataCadastro)
         {
             Console.WriteLine("Qual a quantidade de pessoas no quarto?");
             int NumeroPessoas = int.Parse(Console.ReadLine()); // Ainda tem que criar um sistema de verificaçõ se o que foi escrito é inteiro
+            string Titular="";
 
             for (int i = 1; i <= NumeroPessoas; i++)
             {
@@ -30,7 +31,12 @@ namespace SistemaDeReservas.Models
                 int Idade = int.Parse(Console.ReadLine());
 
                 _pessoas.Add(new Pessoa(Nome, Idade, CPF, NumeroQuarto, DataCadastro));
+                if (i == 1)
+                {
+                    Titular = Nome;
+                }
             }
+            return Titular;
         }
             
         public string ListarPessoasCadastradas()
