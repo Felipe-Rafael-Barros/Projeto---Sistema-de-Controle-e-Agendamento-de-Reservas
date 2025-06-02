@@ -54,33 +54,55 @@ namespace SistemaDeReservas.Models
             return tabela.ToString();
         }
 
-        public int AlterarDisponibilidade()
+        public int AlterarDisponibilidade(bool Cadastro, int NumeroDoQuartoRemove)
         {
-            int numero = 0;
-            bool QuartoEncontrado = false;
-            while (!QuartoEncontrado)
+            int auxiliar = 0;
+            if (Cadastro == true)
             {
-                Console.WriteLine("Por favor, selecione o nº do quarto desejado:");
-                numero = int.Parse(Console.ReadLine());
-                for (int i = 0; i < _quartos.Count; i++)
+                int numero = 0;
+                bool QuartoEncontrado = false;
+                while (!QuartoEncontrado)
                 {
-                    if (_quartos[i].Numero == numero)
+                    Console.WriteLine("Por favor, selecione o nº do quarto desejado:");
+                    numero = int.Parse(Console.ReadLine());
+                    for (int i = 0; i < _quartos.Count; i++)
                     {
-                        _quartos[i].Disponivel = !_quartos[i].Disponivel;
-                        QuartoEncontrado = true;
-                        Console.WriteLine("O quarto " + _quartos[i].Numero + " Agora está marcado como ocupado com sucesso. ");
+                        if (_quartos[i].Numero == numero)
+                        {
+                            _quartos[i].Disponivel = !_quartos[i].Disponivel;
+                            QuartoEncontrado = true;
+                            Console.WriteLine("O quarto " + _quartos[i].Numero + " Agora está marcado como ocupado com sucesso. ");
 
 
+                        }
                     }
-                }
-                if (QuartoEncontrado == false)
-                {
-                    Console.WriteLine("Quarto não encontrado, por favor tente outro dentre os listados anteriormente.");
-                }
-                
+                    if (QuartoEncontrado == false)
+                    {
+                        Console.WriteLine("Quarto não encontrado, por favor tente outro dentre os listados anteriormente.");
+                    }
 
+
+                }
+                return numero;
             }
-            return numero;
+            else if (Cadastro == false)
+            {
+                for (int i = 0; i < _quartos.Count; i++)
+                    {
+                        if (_quartos[i].Numero == NumeroDoQuartoRemove)
+                        {
+                            _quartos[i].Disponivel = !_quartos[i].Disponivel;
+                            Console.WriteLine("O quarto " + _quartos[i].Numero + " Agora está marcado como disponível com sucesso. ");
+
+
+                        }
+                    }
+            }
+            else
+            {
+                Console.WriteLine("Erro Do parametro passado na função cadastro/remove");
+            }
+            return auxiliar;
         }
 
         public (int,string)  DiariaDoQuarto(int NumeroQuarto)

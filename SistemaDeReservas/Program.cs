@@ -45,7 +45,9 @@ while (SistemaAtivo)
         //AtualizarReserva();
         break;
     case "4":
-        //CancelarReserva();
+        Console.WriteLine(GerenciadorReservas.CancelarReserva());
+        Console.WriteLine("Clique em alguma tecla para voltar ao menu");
+        Console.ReadLine();
         break;
     case "5": //Lista Quartos cadastrados
         Console.WriteLine(GerenciadorReservas.ListarQuartos());

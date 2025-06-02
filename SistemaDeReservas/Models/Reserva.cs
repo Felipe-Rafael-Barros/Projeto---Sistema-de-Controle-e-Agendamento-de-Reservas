@@ -14,10 +14,12 @@ namespace SistemaDeReservas.Models
         public int PrecoDiaria { get; set; }
 
         public int CustoTotal { get; private set; }
+        
+        public int NumeroQuarto { get; set; }
 
-        public Reserva( int precoDiaria, DateTime dataEntrada, DateTime dataSaida)
+        public Reserva(int numeroQuarto,int precoDiaria, DateTime dataEntrada, DateTime dataSaida)
         {
-
+            NumeroQuarto = numeroQuarto;
             DataEntrada = dataEntrada;
             DataSaida = dataSaida;
             PrecoDiaria = precoDiaria;

@@ -52,7 +52,7 @@ namespace SistemaDeReservas.Models
 
             var tabela = new StringBuilder();
 
-            
+
             tabela.AppendLine("┌──────────┬──────────────┬─────────────┬─────────────┬────────────┬────────────┐");
             tabela.AppendLine("│ Titular  │    Tipo      │  Nº Quarto  │ Preço Total │Data Entrada│ Data Saida │");
             tabela.AppendLine("│          │              │             │             │            │            │");
@@ -73,7 +73,7 @@ namespace SistemaDeReservas.Models
         {
             if (string.IsNullOrEmpty(input))
                 return string.Empty.PadRight(maxLength);
-            
+
             return input.Length <= maxLength ? input : input.Substring(0, maxLength - 1) + "...";
         }
 
@@ -85,7 +85,7 @@ namespace SistemaDeReservas.Models
             Console.WriteLine("Escolha o quarto dentre as opções disponíveis");
             Console.WriteLine(ListarQuartos());
 
-            int NumeroQuarto = _gerenciadorQuartos.AlterarDisponibilidade();
+            int NumeroQuarto = _gerenciadorQuartos.AlterarDisponibilidade(true, 0);
 
             (int PrecoDiaria, String TipoDoQuarto) = _gerenciadorQuartos.DiariaDoQuarto(NumeroQuarto);
 
@@ -100,7 +100,42 @@ namespace SistemaDeReservas.Models
             NumeroQuartos.Add(NumeroQuarto);
             TipoQuarto.Add(TipoDoQuarto);
 
-            _reservas.Add(new Reserva(PrecoDiaria, DataEntrada, DataSaida));
+            _reservas.Add(new Reserva(NumeroQuarto,PrecoDiaria, DataEntrada, DataSaida));
+        }
+
+        public string CancelarReserva()
+        {   
+            if (!_reservas.Any())
+                return "Nenhuma reserva cadastrada.";
+
+
+            int NumeroAlvo=0;
+            
+            Console.WriteLine(ListarQuartos());
+            Console.WriteLine("Qual o quarto que você quer cancelar a reserva?");
+            int NumeroDoQuarto = int.Parse(Console.ReadLine());
+
+            for (int i = 0; i < _reservas.Count; i++)
+            {
+                if (NumeroDoQuarto == NumeroQuartos[i])
+                {
+                    NumeroAlvo = i;
+
+                    _gerenciadorQuartos.AlterarDisponibilidade(false, NumeroDoQuarto);
+                    _gerenciadorPessoas.RemoverPessoasQuarto(NumeroDoQuarto);
+                    _reservas.RemoveAll(r => r.NumeroQuarto == NumeroDoQuarto);
+                    TitularesQuartos.RemoveAt(NumeroAlvo);
+                    NumeroQuartos.RemoveAt(NumeroAlvo);
+                    TipoQuarto.RemoveAt(NumeroAlvo);
+                    return "Reserva do Quarto Cancelada";
+                }
+            }
+            Console.WriteLine("Quarto Não encontrado ou Não está Ocupado, tente novamente.");
+
+            
+
+
+            return "";
         }
 
  

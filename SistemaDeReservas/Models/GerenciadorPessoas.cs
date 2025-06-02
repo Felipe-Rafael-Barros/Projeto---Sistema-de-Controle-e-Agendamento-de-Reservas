@@ -19,7 +19,7 @@ namespace SistemaDeReservas.Models
         {
             Console.WriteLine("Qual a quantidade de pessoas no quarto?");
             int NumeroPessoas = int.Parse(Console.ReadLine()); // Ainda tem que criar um sistema de verificaçõ se o que foi escrito é inteiro
-            string Titular="";
+            string Titular = "";
 
             for (int i = 1; i <= NumeroPessoas; i++)
             {
@@ -38,7 +38,7 @@ namespace SistemaDeReservas.Models
             }
             return Titular;
         }
-            
+
         public string ListarPessoasCadastradas()
         {
             if (!_pessoas.Any())
@@ -54,8 +54,8 @@ namespace SistemaDeReservas.Models
             foreach (var pessoa in _pessoas.OrderBy(p => p.NumeroQuarto).ThenBy(p => p.Nome))
             {
                 string cpfFormatado = pessoa.CPF;
-                string nomeFormatado = pessoa.Nome.Length > 16 ? 
-                    pessoa.Nome.Substring(0, 13) + "..." : 
+                string nomeFormatado = pessoa.Nome.Length > 16 ?
+                    pessoa.Nome.Substring(0, 13) + "..." :
                     pessoa.Nome.PadRight(16);
 
                 tabela.AppendLine($"│ {pessoa.NumeroQuarto,-12} │ {nomeFormatado,-16} │ {cpfFormatado,-12}   │ {pessoa.Idade,6} │ {pessoa.DataCadastro:dd/MM/yyyy}    │");
@@ -63,6 +63,11 @@ namespace SistemaDeReservas.Models
 
             tabela.AppendLine("└──────────────┴──────────────────┴──────────────────┴────────┴───────────────┘");
             return tabela.ToString();
+        }
+
+        public void RemoverPessoasQuarto(int NumeroQuarto)
+        {
+            _pessoas.RemoveAll(p => p.NumeroQuarto == NumeroQuarto);
         }
                         
 
