@@ -66,8 +66,42 @@ namespace SistemaDeReservas.Models
         }
 
         public void RemoverPessoasQuarto(int NumeroQuarto)
+
         {
             _pessoas.RemoveAll(p => p.NumeroQuarto == NumeroQuarto);
+        }
+
+        public void AdicionarUmaPessoa()
+        {
+            try //Testando try - catch
+            {
+                Console.WriteLine("Digite o Nome da Nova Pessoa");
+                string nome = Console.ReadLine();
+
+                Console.WriteLine("Digite a Idade da Nova Pessoa");  
+                int idade = int.Parse(Console.ReadLine());
+
+                Console.WriteLine("Digite o CPF da Nova Pessoa");  
+                string cpf = Console.ReadLine();
+
+                Console.WriteLine("Digite o Nº do quarto");
+                int numeroQuarto = int.Parse(Console.ReadLine());
+
+                
+                DateTime dataCadastro = DateTime.Now; 
+
+                _pessoas.Add(new Pessoa(nome, idade, cpf, numeroQuarto, dataCadastro));
+                
+                Console.WriteLine("Pessoa adicionada com sucesso!");
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("Erro: Formato inválido para idade ou número do quarto.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Ocorreu um erro: {ex.Message}");
+            }
         }
                         
 

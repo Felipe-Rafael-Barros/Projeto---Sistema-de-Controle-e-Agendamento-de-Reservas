@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Text;
+using System.Diagnostics;
 
 namespace SistemaDeReservas.Models
 {
@@ -100,17 +101,17 @@ namespace SistemaDeReservas.Models
             NumeroQuartos.Add(NumeroQuarto);
             TipoQuarto.Add(TipoDoQuarto);
 
-            _reservas.Add(new Reserva(NumeroQuarto,PrecoDiaria, DataEntrada, DataSaida));
+            _reservas.Add(new Reserva(NumeroQuarto, PrecoDiaria, DataEntrada, DataSaida));
         }
 
         public string CancelarReserva()
-        {   
+        {
             if (!_reservas.Any())
                 return "Nenhuma reserva cadastrada.";
 
 
-            int NumeroAlvo=0;
-            
+            int NumeroAlvo = 0;
+
             Console.WriteLine(ListarQuartos());
             Console.WriteLine("Qual o quarto que você quer cancelar a reserva?");
             int NumeroDoQuarto = int.Parse(Console.ReadLine());
@@ -132,12 +133,77 @@ namespace SistemaDeReservas.Models
             }
             Console.WriteLine("Quarto Não encontrado ou Não está Ocupado, tente novamente.");
 
-            
+
 
 
             return "";
         }
 
- 
+
+        public void AtualizarReserva()
+        {
+
+            Console.WriteLine(@"
+            ╔═══════════════════════════════════════════════════════════════════════╗
+            ║                                                                       ║
+            ║   [1] Deseja atualizar um nova data de saida                          ║
+            ║   [2] Deseja adicionar ou remover Pessoas de um mesmo quarto          ║
+            ║   [ ] Pressione qualquer outra tecla voltar ao menu                   ║
+            ║                                                                       ║
+            ╚═══════════════════════════════════════════════════════════════════════╝
+            ");
+            string Opcao = Console.ReadLine();
+
+            switch (Opcao)
+            {
+                //Muda data de Saida
+                case "1":
+                    bool Ativo = true;
+                    while (Ativo) //Rodará até que se acha o quarto válido
+                    {
+                        Console.WriteLine(ListarQuartos());
+                        Console.WriteLine("Dentre os quartos ocupados, qual você deseja modificiar a data limite de térmido da reserva");
+                        int QuartoPedido = int.Parse(Console.ReadLine());
+
+
+                        if (NumeroQuartos.Count > 0)
+                        {
+                            for (int i = 0; i < NumeroQuartos.Count; i++)
+                            {
+                                if (NumeroQuartos[i] == QuartoPedido)
+                                {
+                                    DateTime novaData;
+                                    Console.WriteLine("Data de saida antiga: " + _reservas[i].DataSaida);
+                                    Console.WriteLine("Escolha nova data de saida (dd/MM/yyyy):");
+                                    while (!DateTime.TryParse(Console.ReadLine(), out novaData))
+                                    {
+                                        Console.WriteLine("Formato inválido. Digite novamente (dd/MM/yyyy):");
+                                    }
+                                    _reservas[i].DataSaida = novaData;
+                                }
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine("Não há quartos cadastrados");
+                            Ativo = false;
+                        }
+                    }
+                    break;
+                //Adicionar ou Remover Pessoa de um quarto
+                case "2":
+                    Console.WriteLine("Quantas pessoas quer adicionar no quarto?");
+                    int NumeroPessoasAdd = int.Parse(Console.ReadLine());
+
+                    for (int i = 0; i < NumeroPessoasAdd; i++)
+                    {
+                        _gerenciadorPessoas.AdicionarUmaPessoa();
+                    };
+                    break;
+                default:
+                    break;
+            }
+            
+        }
     }
 }

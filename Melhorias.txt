@@ -2,7 +2,7 @@ Lista De Pontos a Melhorar Ainda No Projeto:
 
 
 - Bug Na contagem do Preço
-- Ao tentar cadastrar uma reservar a um lote já cadastrado o sistema soma-se as pessoas no quarto e troca a disponibilidade de ocupado para disponivel
 - Quando Mudar para ocupado, a lista para verificar as disponibilidade dos quartos fica "quebrada" visualmente.
-- Sem Funcionalidade de Atualizar reservar
-
+- Funcionalidade de Obrigar Padrão Para Data e CPF
+- Na Funcionalidade De Atualização Precisa Adicionar O Sistema De Remover Uma Pessoa Específica(Só O Titular Que Não Pode Ser Removido)
+- Na Funcionalidade De Atualização O Sistema De Adicionar Precisa Bloquear Adicionar Pessoas Em Quartos Disponíveis

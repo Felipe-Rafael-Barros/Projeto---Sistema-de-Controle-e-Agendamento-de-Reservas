@@ -88,15 +88,15 @@ namespace SistemaDeReservas.Models
             else if (Cadastro == false)
             {
                 for (int i = 0; i < _quartos.Count; i++)
+                {
+                    if (_quartos[i].Numero == NumeroDoQuartoRemove)
                     {
-                        if (_quartos[i].Numero == NumeroDoQuartoRemove)
-                        {
-                            _quartos[i].Disponivel = !_quartos[i].Disponivel;
-                            Console.WriteLine("O quarto " + _quartos[i].Numero + " Agora está marcado como disponível com sucesso. ");
+                        _quartos[i].Disponivel = !_quartos[i].Disponivel;
+                        Console.WriteLine("O quarto " + _quartos[i].Numero + " Agora está marcado como disponível com sucesso. ");
 
 
-                        }
                     }
+                }
             }
             else
             {
@@ -105,7 +105,7 @@ namespace SistemaDeReservas.Models
             return auxiliar;
         }
 
-        public (int,string)  DiariaDoQuarto(int NumeroQuarto)
+        public (int, string) DiariaDoQuarto(int NumeroQuarto)
         {
             int PrecoDiaria = 0;
             string Tipo = "";
@@ -118,7 +118,15 @@ namespace SistemaDeReservas.Models
                 }
 
             }
-            return (PrecoDiaria,Tipo);
+            return (PrecoDiaria, Tipo);
         }
+
+        public int NumeroDeQuartosCadastrados()
+        {
+            int Numero = _quartos.Count;
+            return Numero;
+        }
+
+        
     }
 }

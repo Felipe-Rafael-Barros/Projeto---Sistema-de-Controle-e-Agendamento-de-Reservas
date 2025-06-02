@@ -18,7 +18,7 @@ while (SistemaAtivo)
 ║                                                                       ║
 ║   [1] Cadastrar nova reserva                                          ║
 ║   [2] Consultar reservas existentes                                   ║
-║   [3] Atualizar reserva                                               ║
+║   [3] Atualizar Reserva                                               ║
 ║   [4] Cancelar reserva                                                ║
 ║   [5] Verificar Disponibilidade dos Quartos                           ║
 ║   [6] Lista de Hospedes Cadastrado no Sistema                         ║                                                                      ║
@@ -40,7 +40,7 @@ while (SistemaAtivo)
         Console.ReadLine();
         break;
     case "3":
-        //AtualizarReserva();
+        GerenciadorReservas.AtualizarReserva();
         break;
     case "4":
         Console.WriteLine(GerenciadorReservas.CancelarReserva());
