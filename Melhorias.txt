@@ -7,3 +7,6 @@ Lista De Pontos a Melhorar Ainda No Projeto:
 - Na Funcionalidade De Atualização Precisa Adicionar O Sistema De Remover Uma Pessoa Específica(Só O Titular Que Não Pode Ser Removido)
 - Na Funcionalidade De Atualização O Sistema De Adicionar Precisa Bloquear Adicionar Pessoas Em Quartos Disponíveis
 - Precisa-se bloquear na atualização o sistema de deletar o titular
+- Integração mcom Banco de Dados SQL
+- APIs
+- Front-End Do projeto
