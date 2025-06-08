@@ -192,13 +192,32 @@ namespace SistemaDeReservas.Models
                     break;
                 //Adicionar ou Remover Pessoa de um quarto
                 case "2":
-                    Console.WriteLine("Quantas pessoas quer adicionar no quarto?");
-                    int NumeroPessoasAdd = int.Parse(Console.ReadLine());
-
-                    for (int i = 0; i < NumeroPessoasAdd; i++)
+                    Console.WriteLine("Para adicionar pressione 1, para remover pressione 2");
+                    string Opcao2 = Console.ReadLine();
+                    if (Opcao2 == "1")
                     {
-                        _gerenciadorPessoas.AdicionarUmaPessoa();
-                    };
+                        Console.WriteLine("Quantas pessoas quer adicionar no quarto?");
+                        int NumeroPessoasAdd = int.Parse(Console.ReadLine());
+
+                        for (int i = 0; i < NumeroPessoasAdd; i++)
+                        {
+                            _gerenciadorPessoas.AdicionarUmaPessoa();
+                        }
+                    }
+                    else if (Opcao2 == "2")
+                    {
+                        Console.WriteLine("De qual quarto deseja remover as pessoas");
+                        int NumeroQuarto = int.Parse(Console.ReadLine());
+                        _gerenciadorPessoas.RemoverPessoaEspecificaQuarto(NumeroQuarto);
+                    }
+
+
+
+                    else
+                    {
+                        Console.WriteLine("Opção inválida");
+                    }
+                        
                     break;
                 default:
                     break;

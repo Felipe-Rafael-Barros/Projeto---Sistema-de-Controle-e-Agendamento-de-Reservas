@@ -70,7 +70,30 @@ namespace SistemaDeReservas.Models
         {
             _pessoas.RemoveAll(p => p.NumeroQuarto == NumeroQuarto);
         }
+        public void RemoverPessoaEspecificaQuarto(int NumeroQuarto)
+        {
+            Console.WriteLine("Quantas pessoas quer remover do quarto?");
+            int NumeroPessoasRemover = int.Parse(Console.ReadLine());
 
+            for (int i = 0; i < NumeroPessoasRemover; i++)// Repetir o processo para o numero de pessoas que quer remover
+            {
+                for (int j = 0; j < _pessoas.Count; j++) // Avaliar quais pessoas estão nesse quarto 
+                {
+                    if (_pessoas[j].NumeroQuarto == NumeroQuarto)
+                    {
+                        Console.WriteLine("Pessoa " + j + ":" + _pessoas[j]);
+                    }
+                
+
+                }
+                Console.WriteLine("qual o numero da pessoa que você quer remover?");
+                int Numero = int.Parse(Console.ReadLine());
+
+                _pessoas.RemoveAt(Numero);
+                Console.WriteLine("Pessoa Removida com sucesso!");
+            }
+
+        }
         public void AdicionarUmaPessoa()
         {
             try //Testando try - catch

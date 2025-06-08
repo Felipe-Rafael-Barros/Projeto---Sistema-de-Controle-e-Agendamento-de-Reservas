@@ -23,6 +23,11 @@ namespace SistemaDeReservas.Models
             DataCadastro = dataCadastro;
         }
 
+        public override string ToString()
+        {
+            return $"{Nome}";
+        }
+
     }
 
 
