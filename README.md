@@ -11,7 +11,7 @@ O sistema é simples, funcional e roda totalmente no console, utilizando os prin
 
 ## 🗂️ Estrutura do Projeto
 
-```
+
 /SistemaReservas/
 ├── Models/
 │   ├── Pessoa.cs
@@ -23,7 +23,7 @@ O sistema é simples, funcional e roda totalmente no console, utilizando os prin
 ├── Program.cs
 ├── SistemaReservas.csproj
 └── README.md
-```
+
 
 ---
 
