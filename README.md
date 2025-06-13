@@ -48,7 +48,7 @@ O sistema é simples, funcional e roda totalmente no console, utilizando os prin
 2. execute:
    ```bash
    dotnet run
-   ```
+   
 
 ---
 
