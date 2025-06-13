@@ -1,5 +1,3 @@
----
-```markdown
 # 📅 Sistema de Controle e Agendamento de Reservas - .NET C#
 
 ## 📘 Descrição
@@ -12,7 +10,7 @@ O sistema é simples, funcional e roda totalmente no console, utilizando os prin
 
 ## 🗂️ Estrutura do Projeto
 
-
+```
 /SistemaReservas/
 ├── Models/
 │   ├── Pessoa.cs
@@ -24,7 +22,7 @@ O sistema é simples, funcional e roda totalmente no console, utilizando os prin
 ├── Program.cs
 ├── SistemaReservas.csproj
 └── README.md
-
+```
 
 ---
 
@@ -32,7 +30,7 @@ O sistema é simples, funcional e roda totalmente no console, utilizando os prin
 
 - Cadastro de usuários, salas e equipamentos.
 - Agendamento de reservas com verificação de disponibilidade.
-- Consulta de reservas por data, usuário.
+- Consulta de reservas por data e usuário.
 - Cancelamento e status de reserva.
 - Operações realizadas via menu no console.
 
@@ -46,25 +44,25 @@ O sistema é simples, funcional e roda totalmente no console, utilizando os prin
    cd SistemaDeReservas
    ```
 
-2. execute:
+2. Execute:
    ```bash
    dotnet run
-   
+   ```
 
 ---
 
 ## 🖥️ Exemplo de Uso
 
-```txt
+```
 Bem-vindo ao Sistema de Reservas
 
-║   [1] Cadastrar nova reserva                                          ║
-║   [2] Consultar reservas existentes                                   ║
-║   [3] Atualizar Reserva                                               ║
-║   [4] Cancelar reserva                                                ║
-║   [5] Verificar Disponibilidade dos Quartos                           ║
-║   [6] Lista de Hospedes Cadastrado no Sistema                         ║                                                                      ║
-║   [0] Sair  
+║   [1] Cadastrar nova reserva                                 ║
+║   [2] Consultar reservas existentes                          ║
+║   [3] Atualizar Reserva                                      ║
+║   [4] Cancelar reserva                                       ║
+║   [5] Verificar Disponibilidade dos Quartos                  ║
+║   [6] Lista de Hospedes Cadastrados no Sistema               ║
+║   [0] Sair                                                   ║
 ```
 
 ---
@@ -102,5 +100,4 @@ Este projeto é de uso acadêmico e livre para estudos e adaptações.
 
 Caso queira dar sugestões, relatar erros ou contribuir:
 - 📧 feliperafaelbarross@gmail.com
-- 🔗 [linkedin.com/in/felipe-rafael-barros-b2babb280/]([https://linkedin.com/in/seuperfil](https://www.linkedin.com/in/felipe-rafael-barros-b2babb280/))
-```
+- 🔗 [LinkedIn](https://www.linkedin.com/in/felipe-rafael-barros-b2babb280/)
