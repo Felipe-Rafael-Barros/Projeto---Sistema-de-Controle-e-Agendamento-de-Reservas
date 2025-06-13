@@ -101,5 +101,5 @@ Este projeto é de uso acadêmico e livre para estudos e adaptações.
 
 Caso queira dar sugestões, relatar erros ou contribuir:
 - 📧 feliperafaelbarross@gmail.com
-- 🔗 [linkedin.com/in/seuperfil]([https://linkedin.com/in/seuperfil](https://www.linkedin.com/in/felipe-rafael-barros-b2babb280/))
+- 🔗 [linkedin.com/in/felipe-rafael-barros-b2babb280/]([https://linkedin.com/in/seuperfil](https://www.linkedin.com/in/felipe-rafael-barros-b2babb280/))
 ```
